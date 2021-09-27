@@ -1,16 +1,6 @@
 import React from 'react';
-import useSnackBar from '../src/useSnackbar';
-import Test from './Test';
+import Test from './Example';
 
-const App = () => {
-  const { isSnackbarOpen, SnackBar } = useSnackBar();
-
-  return (
-    <>
-      <Test />
-      {isSnackbarOpen && <SnackBar />}
-    </>
-  );
-};
+const App = () => <Test />;
 
 export default App;

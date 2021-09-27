@@ -1,14 +1,16 @@
 import React, { useEffect } from 'react';
 import useSnackBar from '../src/useSnackbar';
 
-const Test = () => {
+const Example = () => {
+  // 사용 예시
+
   const { openSnackBar } = useSnackBar();
 
   useEffect(() => {
-    openSnackBar('저장에 성공했습니다.');
+    openSnackBar('새로운 페이지가 열렸습니다.');
   }, []);
 
-  return <div>test</div>;
+  return <div>Example</div>;
 };
 
-export default Test;
+export default Example;
