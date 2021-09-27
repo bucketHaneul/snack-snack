@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import SnackbarContext from './SnackbarContext';
 import { default as SnackBarComponent } from './Snackbar/Snackbar';
 
-const SnackbarProvider = ({ children }) => {
+const SnackbarProvider = ({ children, customStyles }) => {
   const [snackbarMessage, setSnackbarMessage] = useState('원하는 메시지를 입력하세요!');
   const [isSnackbarOpen, setSnackbarOpen] = useState(false);
 
@@ -15,7 +15,7 @@ const SnackbarProvider = ({ children }) => {
 
   const SnackBar = () => (
     <SnackbarPortal>
-      <SnackBarComponent>{snackbarMessage}</SnackBarComponent>
+      <SnackBarComponent styles={customStyles}>{snackbarMessage}</SnackBarComponent>
     </SnackbarPortal>
   );
 
@@ -28,7 +28,12 @@ const SnackbarProvider = ({ children }) => {
 };
 
 SnackbarProvider.propTypes = {
-  children: PropTypes.node,
+  children: PropTypes.node.isRequired,
+  customStyles: PropTypes.object,
+};
+
+SnackbarProvider.defaultProps = {
+  customStyles: {},
 };
 
 export default SnackbarProvider;

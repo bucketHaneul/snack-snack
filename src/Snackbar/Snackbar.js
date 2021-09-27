@@ -6,6 +6,10 @@ const Snackbar = ({ children, styles }) => <Container styles={styles}>{children}
 
 Snackbar.propTypes = {
   children: PropTypes.string.isRequired,
+  styles: PropTypes.object,
+};
+
+Snackbar.defaultProps = {
   styles: {},
 };
 
