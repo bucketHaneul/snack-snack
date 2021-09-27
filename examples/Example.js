@@ -1,9 +1,8 @@
 import React, { useEffect } from 'react';
 import useSnackBar from '../src/useSnackbar';
 
+// 사용 예시
 const Example = () => {
-  // 사용 예시
-
   const { openSnackBar } = useSnackBar();
 
   useEffect(() => {
