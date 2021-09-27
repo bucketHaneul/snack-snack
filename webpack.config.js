@@ -1,4 +1,5 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const isProduction = process.env.NODE_ENV == 'production';
 
@@ -11,7 +12,11 @@ const config = {
     open: true,
     host: 'localhost',
   },
-  plugins: [],
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './examples/index.html',
+    }),
+  ],
   module: {
     rules: [
       {
