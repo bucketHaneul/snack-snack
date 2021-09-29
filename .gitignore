@@ -1,2 +1,11 @@
 .idea
+
+# misc
+.DS_Store
+
+# dependencies
 node_modules
+
+# error
+yarn-error.log
+
