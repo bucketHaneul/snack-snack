@@ -12,7 +12,7 @@ const useSnackBar = () => {
   useEffect(() => {
     if (!isSnackbarOpen) return;
 
-    const intervalId = setInterval(() => {
+    const intervalId = setTimeout(() => {
       setSnackbarMessage('');
       setSnackbarOpen(false);
     }, 3000);
