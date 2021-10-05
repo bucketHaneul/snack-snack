@@ -1,13 +1,13 @@
 {
-  "name": "my-webpack-project",
+  "name": "snack-snack",
   "version": "1.0.0",
-  "description": "My webpack project",
-  "main": "index.js",
-  "repository": "https://github.com/HyuuunjuKim/snackbar",
+  "description": "snack-snack is a library which makes it simple to use snackbar in functional component with React App",
+  "main": "dist/index.js",
+  "repository": "https://github.com/HyuuunjuKim/snack-snack",
   "author": "Kim Hyunju <gus7wn@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/HyuuunjuKim/snackbar"
+    "url": "https://github.com/HyuuunjuKim/snack-snack"
   },
   "dependencies": {
     "@emotion/react": "^11.4.1",
@@ -17,6 +17,7 @@
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
+    "@babel/cli": "^7.15.7",
     "@babel/core": "^7.15.5",
     "@babel/preset-env": "^7.15.6",
     "@babel/preset-react": "^7.14.5",
@@ -39,6 +40,7 @@
   "scripts": {
     "build": "webpack --mode=production --node-env=production",
     "build:dev": "webpack --mode=development",
+    "build:publish": "rm -rf dist && mkdir dist && babel src -d dist --copy-files",
     "start": "webpack serve",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
