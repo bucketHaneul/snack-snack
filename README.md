@@ -1,17 +1,17 @@
-# 🍪 { 라이브러리 이름 }
+# 🍪 snack-snack
 
-{ 라이브러리 이름 } is a library which makes it simple to use snackbar in functional component with React App. With this library, you can customize and use snackbar which fits your application the most.
+snack-snack is a library which makes it simple to use snackbar in functional component with React App. With this library, you can customize and use snackbar which fits your application the most.
 
 # 🧩 Getting Started
 
 ```
-yarn add { 라이브러리 이름 }
+yarn add snack-snack
 ```
 
 or
 
 ```
-npm install { 라이브러리 이름 }
+npm install snack-snack
 ```
 
 # 🎨 How to use
@@ -36,7 +36,7 @@ npm install { 라이브러리 이름 }
 2. Wrap your app inside a SnackbarProvider component
 
 ```js
-import { SnackbarProvider } from '{ 라이브러리 이름 }';
+import { SnackbarProvider } from 'snack-snack';
 
 <SnackbarProvider>
   <App />
@@ -46,7 +46,7 @@ import { SnackbarProvider } from '{ 라이브러리 이름 }';
 3. You can use useSnackbar hook in your functional components
 
 ```js
-import { useSnackbar } from '{ 라이브러리 이름 }';
+import { useSnackbar } from 'snack-snack';
 
 const Example = () => {
   const { openSnackbar } = useSnackbar();
