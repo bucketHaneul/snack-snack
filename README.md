@@ -36,10 +36,14 @@ npm install snack-snack
 2. Wrap your app inside a SnackbarProvider component
 
 ```js
+// App.js
+
 import { SnackbarProvider } from 'snack-snack';
 
 <SnackbarProvider>
-  <App />
+  <YourComponent1 />
+  <YourComponent2 />
+  <YourComponent3 />
 </SnackbarProvider>;
 ```
 
