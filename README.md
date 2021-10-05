@@ -1,4 +1,7 @@
 # 🍪 snack-snack
+<p align="center">
+  <img width="512" alt="Group 62 (2)" src="https://user-images.githubusercontent.com/43339385/135998215-1e66d9ff-ec42-4686-988a-3c2368f8972b.png" />
+</p>
 
 snack-snack is a library which makes it simple to use snackbar in functional component with React App. With this library, you can customize and use snackbar which fits your application the most.
 
