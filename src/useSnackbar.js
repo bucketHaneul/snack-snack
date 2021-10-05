@@ -1,10 +1,10 @@
 import { useContext, useEffect } from 'react';
 import SnackbarContext from './SnackbarContext';
 
-const useSnackBar = () => {
+const useSnackbar = () => {
   const { setSnackbarMessage, isSnackbarOpen, setSnackbarOpen } = useContext(SnackbarContext);
 
-  const openSnackBar = (newMessage) => {
+  const openSnackbar = (newMessage) => {
     setSnackbarMessage(newMessage);
     setSnackbarOpen(true);
   };
@@ -20,7 +20,7 @@ const useSnackBar = () => {
     return () => clearInterval(intervalId);
   }, [isSnackbarOpen]);
 
-  return { isSnackbarOpen, openSnackBar };
+  return { isSnackbarOpen, openSnackbar };
 };
 
-export default useSnackBar;
+export default useSnackbar;

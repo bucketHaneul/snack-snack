@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import SnackbarContext from './SnackbarContext';
-import { default as SnackBarComponent } from './Snackbar/Snackbar';
+import { default as SnackbarComponent } from './Snackbar/Snackbar';
 
 const SnackbarProvider = ({ children, customStyles }) => {
   const [snackbarMessage, setSnackbarMessage] = useState('원하는 메시지를 입력하세요!');
@@ -13,16 +13,16 @@ const SnackbarProvider = ({ children, customStyles }) => {
   const SnackbarPortal = ({ children }) =>
     ReactDOM.createPortal(children, document.getElementById('snackbar'));
 
-  const SnackBar = () => (
+  const Snackbar = () => (
     <SnackbarPortal>
-      <SnackBarComponent styles={customStyles}>{snackbarMessage}</SnackBarComponent>
+      <SnackbarComponent styles={customStyles}>{snackbarMessage}</SnackbarComponent>
     </SnackbarPortal>
   );
 
   return (
     <SnackbarContext.Provider value={store}>
       {children}
-      {isSnackbarOpen && <SnackBar />}
+      {isSnackbarOpen && <Snackbar />}
     </SnackbarContext.Provider>
   );
 };
