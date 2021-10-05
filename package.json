@@ -9,6 +9,14 @@
   "bugs": {
     "url": "https://github.com/HyuuunjuKim/snack-snack"
   },
+  "keywords": [
+    "snackbar",
+    "useSnackbar",
+    "snack-snack",
+    "react",
+    "javascript",
+    "notification"
+  ],
   "dependencies": {
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
