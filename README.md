@@ -36,8 +36,7 @@ npm install snack-snack
 </html>
 ```
 
-2. Wrap your app inside a SnackbarProvider component
-
+2. Put a SnackbarProvider component by wrapping your components
 ```js
 // App.js
 
@@ -62,6 +61,14 @@ const Example = () => {
 }
 
 ```
+# Example
+
+<p align="center">
+  <img width="640" alt="Group 62 (2)" src="https://user-images.githubusercontent.com/43339385/136377326-ef05541c-c6a7-46f6-8c1b-170238f684bc.png" />
+</p>
+
+You can see more detail example code in [example directory](https://github.com/HyuuunjuKim/snack-snack/tree/main/examples)
+
 
 # 🟣 Contact
 
