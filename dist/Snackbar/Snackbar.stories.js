@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Red = exports.Default = exports["default"] = void 0;
+exports["default"] = exports.Red = exports.Default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 

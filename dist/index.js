@@ -3,16 +3,16 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-Object.defineProperty(exports, "useSnackbar", {
-  enumerable: true,
-  get: function get() {
-    return _useSnackbar["default"];
-  }
-});
 Object.defineProperty(exports, "SnackbarProvider", {
   enumerable: true,
   get: function get() {
     return _SnackbarProvider["default"];
+  }
+});
+Object.defineProperty(exports, "useSnackbar", {
+  enumerable: true,
+  get: function get() {
+    return _useSnackbar["default"];
   }
 });
 

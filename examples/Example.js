@@ -6,7 +6,7 @@ const Example = () => {
   const { openSnackbar } = useSnackbar();
 
   useEffect(() => {
-    openSnackbar('새로운 페이지가 열렸습니다.');
+    openSnackbar('Open new page');
   }, []);
 
   return <div>Example</div>;
