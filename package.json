@@ -1,6 +1,6 @@
 {
   "name": "snack-snack",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "snack-snack is a library which makes it simple to use snackbar in functional component with React App",
   "main": "dist/index.js",
   "repository": "https://github.com/HyuuunjuKim/snack-snack",
