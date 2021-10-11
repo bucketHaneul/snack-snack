@@ -59,8 +59,21 @@ const Example = () => {
 
   openSnackbar(message what you want);
 }
-
 ```
+
+4. Custom snackbar what you want by providing customStyles props to SnackbarProvider
+```js
+// App.js
+
+import { SnackbarProvider } from 'snack-snack';
+
+<SnackbarProvider customStyles = {{ backgroundColor: 'red' }}>
+  <YourComponent1 />
+  <YourComponent2 />
+  <YourComponent3 />
+</SnackbarProvider>;
+```
+
 # Example
 
 <p align="center">
