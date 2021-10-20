@@ -12,7 +12,7 @@ const Container = styled.div`
   color: #fff;
   box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
   z-index: 100;
-  position: absolute;
+  position: fixed;
   bottom: 16px;
   left: 50%;
   transform: translateX(-50%);
