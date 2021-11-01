@@ -16,6 +16,9 @@ const Container = styled.div`
   bottom: 16px;
   left: 50%;
   transform: translateX(-50%);
+  animation: fade 3s;
+  -webkit-animation: fade 3s;
+  animation-fill-mode: forwards;
 
   ${({ styles }) => styles && styles};
 
@@ -55,9 +58,6 @@ const Container = styled.div`
       bottom: 0;
     }
   }
-
-  animation: fade 3s;
-  -webkit-animation: fade 3s;
 `;
 
 export { Container };
