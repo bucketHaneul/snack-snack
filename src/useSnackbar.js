@@ -2,7 +2,7 @@ import { useContext, useEffect } from 'react';
 import SnackbarContext from './SnackbarContext';
 
 const useSnackbar = () => {
-  const { setSnackbarMessage, isSnackbarOpen, setSnackbarOpen } = useContext(SnackbarContext);
+  const { isSnackbarOpen, setSnackbarMessage, setSnackbarOpen } = useContext(SnackbarContext);
 
   const openSnackbar = (newMessage) => {
     setSnackbarMessage(newMessage);
@@ -12,12 +12,12 @@ const useSnackbar = () => {
   useEffect(() => {
     if (!isSnackbarOpen) return;
 
-    const intervalId = setTimeout(() => {
+    const timerId = setTimeout(() => {
       setSnackbarMessage('');
       setSnackbarOpen(false);
     }, 3000);
 
-    return () => clearInterval(intervalId);
+    return () => clearTimeout(timerId);
   }, [isSnackbarOpen]);
 
   return { isSnackbarOpen, openSnackbar };
