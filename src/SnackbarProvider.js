@@ -1,28 +1,17 @@
-import React, { useState } from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react';
 import PropTypes from 'prop-types';
 import SnackbarContext from './SnackbarContext';
-import { default as SnackbarComponent } from './Snackbar/Snackbar';
+import useSnackbarProvider from './useSnackbarProvider';
 
 const SnackbarProvider = ({ children, customStyles }) => {
-  const [snackbarMessage, setSnackbarMessage] = useState('원하는 메시지를 입력하세요!');
-  const [isSnackbarOpen, setSnackbarOpen] = useState(false);
+  const { Snackbar, openSnackbar } = useSnackbarProvider();
 
-  const store = { snackbarMessage, setSnackbarMessage, isSnackbarOpen, setSnackbarOpen };
-
-  const SnackbarPortal = ({ children }) =>
-    ReactDOM.createPortal(children, document.getElementById('snackbar'));
-
-  const Snackbar = () => (
-    <SnackbarPortal>
-      <SnackbarComponent styles={customStyles}>{snackbarMessage}</SnackbarComponent>
-    </SnackbarPortal>
-  );
+  const store = { openSnackbar };
 
   return (
     <SnackbarContext.Provider value={store}>
       {children}
-      {isSnackbarOpen && <Snackbar />}
+      <Snackbar customStyles={customStyles} />
     </SnackbarContext.Provider>
   );
 };
