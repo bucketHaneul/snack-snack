@@ -39,8 +39,17 @@ var useSnackbarProvider = function useSnackbarProvider() {
       snackbarMessage = _useState2[0],
       setSnackbarMessage = _useState2[1];
 
+  var _useState3 = (0, _react.useState)(false),
+      _useState4 = _slicedToArray(_useState3, 2),
+      isOpenSnackbar = _useState4[0],
+      setIsOpenSnackbar = _useState4[1];
+
   var openSnackbar = function openSnackbar(newMessage) {
     setSnackbarMessage(newMessage);
+    setIsOpenSnackbar(true);
+    setTimeout(function () {
+      setIsOpenSnackbar(false);
+    }, 3000);
   };
 
   var SnackbarPortal = function SnackbarPortal(_ref) {
@@ -50,7 +59,7 @@ var useSnackbarProvider = function useSnackbarProvider() {
 
   var Snackbar = function Snackbar(_ref2) {
     var customStyles = _ref2.customStyles;
-    return /*#__PURE__*/_react["default"].createElement(SnackbarPortal, null, /*#__PURE__*/_react["default"].createElement(_Snackbar["default"], {
+    return isOpenSnackbar && /*#__PURE__*/_react["default"].createElement(SnackbarPortal, null, /*#__PURE__*/_react["default"].createElement(_Snackbar["default"], {
       styles: customStyles
     }, snackbarMessage));
   };
